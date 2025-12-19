@@ -47,7 +47,7 @@
 ```bash
 # کلون کردن پروژه
 git clone https://github.com/Noirc0re/api-isp-org
-cd rezvangate
+cd api-isp-org
 
 # نصب وابستگی‌ها
 npm install
@@ -187,15 +187,8 @@ rezvangate/
 
 این پروژه تحت لایسنس MIT منتشر شده است. برای اطلاعات بیشتر فایل [LICENSE](LICENSE) را ببینید.
 
-## 📧 تماس
-
-- وبسایت: [rezvangate.com](https://rezvangate.com)
-- ایمیل: info@rezvangate.com
-
----
 
 <p align="center">
-  ساخته شده با ❤️ توسط تیم RezvanGate
 </p>
 
 </div>
