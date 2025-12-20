@@ -6,6 +6,48 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [3.0.0] - 2025-12-20
+
+### 🇬🇧 English
+
+#### Added
+- **Local GeoIP Database**: Complete offline IP geolocation using MaxMind GeoLite2 databases
+- **Zero External API Calls**: All IP lookups are now performed locally without any external dependencies
+- **ASN Database**: Added ASN (Autonomous System Number) lookup for ISP/Organization info
+- **Faster Response**: ~1-5ms response time instead of 200-500ms with external APIs
+- **Unlimited Requests**: No rate limits from external API providers
+- **Privacy Enhanced**: IP addresses never leave the server
+
+#### Changed
+- **Backend Architecture**: Complete rewrite to use `maxmind` library with local `.mmdb` databases
+- **Database Files**: Added `data/` folder with GeoLite2-Country, GeoLite2-City, GeoLite2-ASN databases
+- **Memory Usage**: Increased to ~140MB due to in-memory database loading (trade-off for speed)
+
+#### Removed
+- **External API Dependency**: Removed `ipwho.is` API calls - everything is local now
+
+---
+
+### 🇮🇷 فارسی
+
+#### اضافه شده
+- **دیتابیس محلی GeoIP**: جستجوی کامل آفلاین موقعیت IP با دیتابیس‌های MaxMind GeoLite2
+- **بدون API خارجی**: تمام جستجوهای IP به صورت محلی و بدون وابستگی خارجی انجام می‌شود
+- **دیتابیس ASN**: اضافه شدن جستجوی ASN برای اطلاعات ISP/سازمان
+- **پاسخ سریع‌تر**: زمان پاسخ ~1-5 میلی‌ثانیه به جای 200-500 میلی‌ثانیه با API خارجی
+- **درخواست نامحدود**: بدون محدودیت از طرف ارائه‌دهندگان API خارجی
+- **حریم خصوصی بهتر**: آدرس‌های IP هرگز از سرور خارج نمی‌شوند
+
+#### تغییر یافته
+- **معماری بک‌اند**: بازنویسی کامل برای استفاده از کتابخانه `maxmind` با دیتابیس‌های محلی `.mmdb`
+- **فایل‌های دیتابیس**: اضافه شدن پوشه `data/` با دیتابیس‌های GeoLite2-Country, GeoLite2-City, GeoLite2-ASN
+- **مصرف حافظه**: افزایش به ~140MB به دلیل بارگذاری دیتابیس در حافظه (مبادله برای سرعت)
+
+#### حذف شده
+- **وابستگی به API خارجی**: حذف فراخوانی‌های API `ipwho.is` - همه چیز محلی است
+
+---
+
 ## [2.0.0] - 2025-12-19
 
 ### 🇬🇧 English
@@ -102,6 +144,7 @@ All notable changes to this project will be documented in this file.
 
 | Version | Date | Description |
 |---------|------|-------------|
+| 3.0.0 | 2025-12-20 | Local GeoIP database, no external API |
 | 2.0.0 | 2025-12-19 | HTTPS API, Cloudflare support, IPv4/IPv6 |
 | 1.0.0 | 2025-12-18 | Initial release |
 
