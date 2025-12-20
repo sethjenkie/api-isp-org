@@ -110,7 +110,26 @@ cd api-isp-org
 npm install
 ```
 
-### قدم ۳: اجرای سرور توسعه
+### قدم ۳: دانلود دیتابیس GeoIP
+
+<div dir="rtl">
+
+برای کار کردن API به دیتابیس‌های MaxMind GeoLite2 نیاز دارید.
+
+📖 **[راهنمای کامل نصب دیتابیس](DATABASE_SETUP.md)**
+
+یا به صورت خلاصه:
+
+</div>
+
+1. Create account at [MaxMind](https://www.maxmind.com/en/geolite2/signup)
+2. Generate a License Key
+3. Download databases to `data/` folder:
+   - `GeoLite2-Country.mmdb`
+   - `GeoLite2-City.mmdb`
+   - `GeoLite2-ASN.mmdb`
+
+### قدم ۴: اجرای سرور توسعه
 
 <div dir="rtl">
 
@@ -180,7 +199,23 @@ cd api-isp-org
 npm install
 ```
 
-### قدم ۳: ساخت نسخه Production
+### قدم ۳: دانلود دیتابیس GeoIP
+
+<div dir="rtl">
+
+📖 **[راهنمای کامل نصب دیتابیس](DATABASE_SETUP.md)**
+
+</div>
+
+```bash
+# Create data directory
+mkdir -p data
+
+# Download databases (replace YOUR_ACCOUNT_ID and YOUR_LICENSE_KEY)
+# See DATABASE_SETUP.md for detailed instructions
+```
+
+### قدم ۴: ساخت نسخه Production
 
 ```bash
 npm run build
@@ -192,7 +227,7 @@ npm run build
 
 </div>
 
-### قدم ۴: نصب PM2 (مدیریت پروسه)
+### قدم ۵: نصب PM2 (مدیریت پروسه)
 
 ```bash
 # نصب PM2 به صورت global
@@ -212,7 +247,7 @@ pm2 startup
 
 </div>
 
-### قدم ۵: بررسی اجرای Backend
+### قدم ۶: بررسی اجرای Backend
 
 ```bash
 # بررسی وضعیت
